@@ -6,7 +6,7 @@ import pickle
 from catboost import CatBoostRegressor, Pool
 from hyperopt import fmin, space_eval, STATUS_OK
 
-from settings import search_space, fit_params, target_name, cat_features, fmin_args
+from params import search_space, fit_params, fmin_args
 from metrics import metrics_compute
 
 # TODO. Metrics, read-prepare data, utils, operator
@@ -29,8 +29,8 @@ def create_pools(df_train: pd.DataFrame,
 
 def train_model(df_train: pd.DataFrame, 
                 df_test: pd.DataFrame, 
-                target: str = target_name,
-                cat_features: list[str] = cat_features
+                target: str,
+                cat_features: list[str]
                 ) -> dict:
 
     train_pool, eval_pool = create_pools(df_train.drop(target, axis=1),
@@ -62,12 +62,3 @@ def train_model(df_train: pd.DataFrame,
     hyperparams = space_eval(search_space, best_params)
 
     return hyperparams
-
-
-
-
-
-
-
-
-

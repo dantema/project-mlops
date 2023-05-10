@@ -1,5 +1,8 @@
 from hyperopt import hp, tpe
 
+split_params = {'test_size': 0.2,
+                'random_state': 42}
+
 #define search space for hyperparameters
 search_space = {'learning_rate': hp.choice('learning_rate', [0.05]),
                 'iterations': hp.choice('iterations', [100]),

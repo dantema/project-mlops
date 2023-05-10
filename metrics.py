@@ -2,7 +2,8 @@ import numpy as np
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
 from utils import array_convert
 
-def metrics_compute(y_true: np.array, y_pred: np.array) -> dict:
+def metrics_compute(y_true: np.array, 
+                    y_pred: np.array) -> dict:
     
     y_true, y_pred = array_convert(y_true), array_convert(y_pred)
         
