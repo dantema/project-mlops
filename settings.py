@@ -1,4 +1,4 @@
-from hyperopt import fmin, hp, tpe, Trials, space_eval
+from hyperopt import hp, tpe
 
 #define search space for hyperparameters
 search_space = {'learning_rate': hp.choice('learning_rate', [0.05]),
@@ -14,3 +14,11 @@ search_space = {'learning_rate': hp.choice('learning_rate', [0.05]),
 
 #define arguments for fit model
 fit_params = {'early_stopping_rounds' : 200}
+
+fmin_args = {'space': search_space,
+            'algo': tpe.suggest,
+            'max_evals' : 2}
+
+target_name = "price"
+
+cat_features = ["model", "transmission", "fuelType"]
