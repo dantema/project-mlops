@@ -1,0 +1,16 @@
+
+__pycache__/data_preparation.cpython-39.pyc
+__pycache__/metrics.cpython-39.pyc
+__pycache__/operators.cpython-39.pyc
+__pycache__/params.cpython-39.pyc
+catboost_model.pkl
+__pycache__/settings.cpython-39.pyc
+__pycache__/train.cpython-39.pyc
+__pycache__/utils.cpython-39.pyc
+catboost_model.pkl
+catboost_model.pkl
+catboost_model.pkl
+catboost_model.pkl
+*.pkl
+catboost_model.pkl
+catboost_model.pkl
